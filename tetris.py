@@ -68,13 +68,14 @@ newblocks = [
 ]
 
 while running:
-    screen.fill("purple")
+    screen.fill("black")
     for row_index, row in enumerate(cells):
         y = row_index*40
         for col_index, col in enumerate(row):
             x = col_index*40
             if(col == 1):
-                pygame.draw.rect(screen, "red", (x, y, 40, 40))
+                pygame.draw.rect(screen, "white", (x, y, 40, 40))
+                pygame.draw.rect(screen, "black", (x, y, 40, 40), 1)
     
 
     
@@ -82,8 +83,8 @@ while running:
     for i in newblocks:
         y=i[0]*40
         x=i[1]*40
-        pygame.draw.rect(screen, "red", (x, y, 40, 40))
-
+        pygame.draw.rect(screen, "light blue", (x, y, 40, 40))
+        pygame.draw.rect(screen, "black", (x, y, 40, 40), 1)
 
     timer += dt
 
