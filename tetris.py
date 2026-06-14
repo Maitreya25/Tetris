@@ -95,6 +95,11 @@ while running:
             if block[0] + 1 > 19:
                 should_lock = True
                 break
+            if(newblocks[3][0] != 19):
+                if(cells[newblocks[3][0] + 1][newblocks[3][1]] == 1 or cells[newblocks[2][0] + 1][newblocks[2][1]] == 1):
+                    should_lock = True
+                    break
+
 
         if should_lock:
             addBlocks(newblocks)
